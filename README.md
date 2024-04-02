@@ -1,66 +1,68 @@
-## Foundry
+# Foundry DAO Governance
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+This is a section of the Cyfrin Foundry Solidity Course.
 
-Foundry consists of:
+[One of my favorite articles on money-based voting being bad](https://vitalik.ca/general/2018/03/28/plutocracy.html)
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+- [Foundry DAO Governance](#foundry-dao-governance)
+- [Getting Started](#getting-started)
+  - [Requirements](#requirements)
+  - [Quickstart](#quickstart)
+- [Usage](#usage)
+  - [Test](#test)
+  - [Deploy](#deploy)
+  - [Estimate gas](#estimate-gas)
+- [Formatting](#formatting)
+- [Thank you!](#thank-you)
 
-## Documentation
+# Getting Started
 
-https://book.getfoundry.sh/
+## Requirements
 
-## Usage
+- [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+  - You'll know you did it right if you can run `git --version` and you see a response like `git version x.x.x`
+- [foundry](https://getfoundry.sh/)
+  - You'll know you did it right if you can run `forge --version` and you see a response like `forge 0.2.0 (816e00b 2023-03-16T00:05:26.396218Z)`
 
-### Build
 
-```shell
-$ forge build
+## Quickstart
+
+```
+git clone https://github.com/Welith/foundry-dao
+cd foundry-dao
+forge install
+forge build
 ```
 
-### Test
+# Usage
 
-```shell
-$ forge test
+## Test
+
+```
+forge test
+```
+## Deploy
+
+I did not write deploy scripts for this project, you can if you'd like!
+
+## Estimate gas
+
+You can estimate how much gas things cost by running:
+
+```
+forge snapshot
 ```
 
-### Format
+And you'll see and output file called `.gas-snapshot`
 
-```shell
-$ forge fmt
+
+# Formatting
+
+
+To run code formatting:
+```
+forge fmt
 ```
 
-### Gas Snapshots
 
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+# Thank you!
